@@ -11,7 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Concrete\" />
     <Folder Include="Logging\" />
     <Folder Include="ValidationRules\" />
   </ItemGroup>

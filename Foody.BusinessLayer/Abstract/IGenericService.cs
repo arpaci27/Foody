@@ -8,10 +8,10 @@ namespace Foody.BusinessLayer.Abstract
 {
     public interface IGenericService<T> where T : class
     {
-        void Insert(T entity);
-        void Update(T entity);
-        void Delete(int id);
-        List<T> GetAll();
-        T GetById(int id);
+        void TInsert(T entity);
+        void TUpdate(T entity);
+        void TDelete(int id);
+        List<T> TGetAll();
+        T TGetById(int id);
     }
 }
