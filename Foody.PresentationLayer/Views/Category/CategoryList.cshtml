@@ -1,4 +1,4 @@
-﻿
+﻿@model List<Foody.EntityLayer.Concrete.Category>
 @{
     ViewData["Title"] = "CategoryList";
     Layout = "~/Views/AdminLayout/Index.cshtml";
@@ -40,31 +40,28 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
+                                    <th scope="col">Category Name</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Delete</th>
+                                    <th scope="col">Update</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>mdo</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>fat</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td colspan="2">Larry the Bird</td>
-                                    <td>twitter</td>
-                                </tr>
+                                @foreach(var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.CategoryId</td>
+                                        <td>@item.CategoryName</td>
+                                        <td>@item.CategoryStatus</td>
+                                        <td><a class="btn btn-danger">Delete</a></td>
+                                        <td><a class="btn btn-info">Update</a></td>
+                                    </tr>
+                                }
+                                
+                                
                             </tbody>
                         </table>
+                        <a class="btn btn-succes">Add New Category</a>
                     </div>
                 </div>
             </div>
