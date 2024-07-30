@@ -2,6 +2,7 @@
 using Foody.BusinessLayer.Concrete;
 using Foody.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Foody.PresentationLayer.Controllers
 {
@@ -28,6 +29,12 @@ namespace Foody.PresentationLayer.Controllers
 		public IActionResult AddCategory(Category category)
 		{
 			_categoryService.TInsert(category);
+			return RedirectToAction("CategoryList");
+		}
+
+		public IActionResult DeleteCategory(int id)
+		{
+			_categoryService.TDelete(id);	
 			return RedirectToAction("CategoryList");
 		}
 	}
