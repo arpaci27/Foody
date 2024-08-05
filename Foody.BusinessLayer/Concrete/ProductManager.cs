@@ -38,6 +38,11 @@ namespace Foody.BusinessLayer.Concrete
             _productDal.Insert(entity);
         }
 
+        public List<Product> TProductListWithCateory()
+        {
+            return _productDal.ProductListWithCateory();
+        }
+
         public void TUpdate(Product entity)
         {
             _productDal.Update(entity);

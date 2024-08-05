@@ -19,7 +19,7 @@ namespace Foody.PresentationLayer.Controllers
         }
         public IActionResult ProductListWithCategory()
         {
-            var products = _productService.TGetAll();
+            var products = _productService.TProductListWithCateory();
             return View(products);
         }
     }
