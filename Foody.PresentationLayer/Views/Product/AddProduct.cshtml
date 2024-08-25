@@ -1,0 +1,73 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "AddProduct";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+
+<h1>Add Product</h1>
+
+<div class="container">
+    <div class="page-inner">
+        <div class="page-header">
+            <h3 class="fw-bold mb-3">Products</h3>
+            <ul class="breadcrumbs mb-3">
+                <li class="nav-home">
+                    <a href="#">
+                        <i class="icon-home"></i>
+                    </a>
+                </li>
+                <li class="separator">
+                    <i class="icon-arrow-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Tables</a>
+                </li>
+                <li class="separator">
+                    <i class="icon-arrow-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Add New Product</a>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Add Product Panel</div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <label>Product Name</label>
+                            <input type="text" asp-for="ProductName" class="form-control" />
+                            <br />
+                            <label>Stock</label>
+                            <input type="number" asp-for="Stock" class="form-control" />
+                            <br />
+                            <label>Price</label>
+                            <input type="text" asp-for="Price" class="form-control" />
+                            <br />
+                            <label>Image</label>
+                            <input type="text" asp-for="ImageUrl" class="form-control" />
+                            <br />
+                            <label>Description</label>
+                            <input type="text" asp-for="Description" class="form-control" />
+                            <br />
+                            <label>Category Id</label>
+                            <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.categories"></select>
+                            <br />
+                            <button class="btn btn-primary">Add Product</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
