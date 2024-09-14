@@ -1,11 +1,10 @@
-﻿@model Category
+﻿@model UpdateSliderDto
 @{
-    ViewData["Title"] = "UpdateCategory";
+    ViewData["Title"] = "UpdateSlider";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h1>UpdateCategory</h1>
-
+<h1>UpdateSlider</h1>
 
 <div class="container">
     <div class="page-inner">
@@ -27,7 +26,7 @@
                     <i class="icon-arrow-right"></i>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Update Category Operation</a>
+                    <a href="#">Update Slider</a>
                 </li>
             </ul>
         </div>
@@ -36,16 +35,19 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-title">Update Category Panel</div>
+                        <div class="card-title">Update Slider Panel</div>
                     </div>
                     <div class="card-body">
                         <form method="post">
-                            <input type="hidden" asp-for="CategoryId" class="form-control" />
+                            <input type="hidden" asp-for="SliderID" class="form-control" />
                             <br />
                             <label>Category Name</label>
-                            <input type="text" asp-for="CategoryName" class="form-control" />
+                            <input type="text" asp-for="SliderTitle" class="form-control" />
                             <br />
-                            <button class="btn btn-info">Add Category</button>
+                            <label>Category Name</label>
+                            <input type="text" asp-for="SliderImageUrl" class="form-control" />
+                            <br />
+                            <button class="btn btn-info">Update Slider</button>
                         </form>
                     </div>
                 </div>
@@ -54,4 +56,3 @@
     </div>
 </div>
 
-    

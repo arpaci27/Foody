@@ -11,10 +11,13 @@ builder.Services.AddDbContext<FoodyContext>();
 builder.Services.AddScoped<ICategoryDal, EfCategoryDal>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
 
+builder.Services.AddScoped<ISliderDal, EfSliderDal>();
+builder.Services.AddScoped<ISliderService, SliderManager>();
+
 builder.Services.AddScoped<IProductDal, EfProdcutDal>();
 builder.Services.AddScoped<IProductService, ProductManager>();// Add services to the container.
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
-
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
